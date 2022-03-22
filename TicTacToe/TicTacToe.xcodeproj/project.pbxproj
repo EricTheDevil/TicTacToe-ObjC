@@ -17,6 +17,7 @@
 		070547FE27E8A0AE0095C136 /* TicTacToeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 070547FD27E8A0AE0095C136 /* TicTacToeTests.m */; };
 		0705480827E8A0AE0095C136 /* TicTacToeUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0705480727E8A0AE0095C136 /* TicTacToeUITests.m */; };
 		0705480A27E8A0AE0095C136 /* TicTacToeUITestsLaunchTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0705480927E8A0AE0095C136 /* TicTacToeUITestsLaunchTests.m */; };
+		0705481A27E8AEC90095C136 /* BoardView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0705481927E8AEC90095C136 /* BoardView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,8 @@
 		0705480327E8A0AE0095C136 /* TicTacToeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TicTacToeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0705480727E8A0AE0095C136 /* TicTacToeUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TicTacToeUITests.m; sourceTree = "<group>"; };
 		0705480927E8A0AE0095C136 /* TicTacToeUITestsLaunchTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TicTacToeUITestsLaunchTests.m; sourceTree = "<group>"; };
+		0705481827E8AEC90095C136 /* BoardView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BoardView.h; sourceTree = "<group>"; };
+		0705481927E8AEC90095C136 /* BoardView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BoardView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +113,8 @@
 				070547E527E8A0AC0095C136 /* SceneDelegate.m */,
 				070547E727E8A0AC0095C136 /* ViewController.h */,
 				070547E827E8A0AC0095C136 /* ViewController.m */,
+				0705481827E8AEC90095C136 /* BoardView.h */,
+				0705481927E8AEC90095C136 /* BoardView.m */,
 				070547EA27E8A0AC0095C136 /* Main.storyboard */,
 				070547ED27E8A0AD0095C136 /* Assets.xcassets */,
 				070547EF27E8A0AD0095C136 /* LaunchScreen.storyboard */,
@@ -270,6 +275,7 @@
 				070547E327E8A0AC0095C136 /* AppDelegate.m in Sources */,
 				070547F427E8A0AD0095C136 /* main.m in Sources */,
 				070547E627E8A0AC0095C136 /* SceneDelegate.m in Sources */,
+				0705481A27E8AEC90095C136 /* BoardView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

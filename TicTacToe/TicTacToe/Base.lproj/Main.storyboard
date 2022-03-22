@@ -16,16 +16,23 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="center" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bxv-yq-4QN">
-                                <rect key="frame" x="16" y="64" width="382" height="386"/>
+                            <view contentMode="center" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bxv-yq-4QN" customClass="BoardView">
+                                <rect key="frame" x="14" y="99" width="386" height="386"/>
                                 <color key="backgroundColor" systemColor="systemBrownColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="bxv-yq-4QN" secondAttribute="height" multiplier="187:189" id="mkK-Tx-blt"/>
+                                    <constraint firstAttribute="height" constant="386" id="LTF-XA-60u"/>
+                                    <constraint firstAttribute="width" secondItem="bxv-yq-4QN" secondAttribute="height" multiplier="1:1" id="VYh-g3-HnF"/>
+                                    <constraint firstAttribute="width" constant="386" id="VaE-O3-gn0"/>
                                 </constraints>
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="bxv-yq-4QN" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="14" id="8gC-G8-uw3"/>
+                            <constraint firstItem="bxv-yq-4QN" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="211" id="LZv-PN-ow2"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="bxv-yq-4QN" secondAttribute="trailing" constant="14" id="PzJ-gz-Pra"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
