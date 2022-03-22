@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -13,29 +13,43 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="center" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bxv-yq-4QN" customClass="BoardView">
-                                <rect key="frame" x="14" y="99" width="386" height="386"/>
+                            <view contentMode="center" translatesAutoresizingMaskIntoConstraints="NO" id="bxv-yq-4QN" customClass="BoardView">
+                                <rect key="frame" x="14" y="99" width="347" height="386"/>
                                 <color key="backgroundColor" systemColor="systemBrownColor"/>
+                                <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="386" id="LTF-XA-60u"/>
-                                    <constraint firstAttribute="width" secondItem="bxv-yq-4QN" secondAttribute="height" multiplier="1:1" id="VYh-g3-HnF"/>
-                                    <constraint firstAttribute="width" constant="386" id="VaE-O3-gn0"/>
+                                    <constraint firstAttribute="width" secondItem="bxv-yq-4QN" secondAttribute="height" multiplier="347:386" id="i4A-oS-lHo"/>
                                 </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="Vn2-W1-0J2" appends="YES" id="Pjl-6H-Que"/>
+                                </connections>
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="bxv-yq-4QN" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="14" id="1UV-c4-5eI"/>
+                            <constraint firstItem="bxv-yq-4QN" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="55" id="7jA-bR-sdH"/>
                             <constraint firstItem="bxv-yq-4QN" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="14" id="8gC-G8-uw3"/>
-                            <constraint firstItem="bxv-yq-4QN" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="211" id="LZv-PN-ow2"/>
+                            <constraint firstItem="bxv-yq-4QN" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="55" id="LZv-PN-ow2"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="bxv-yq-4QN" secondAttribute="trailing" constant="14" id="PzJ-gz-Pra"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="bxv-yq-4QN" secondAttribute="trailing" constant="14" id="eGG-zk-PFT"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="boardView" destination="bxv-yq-4QN" id="nvX-sg-VLf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="Vn2-W1-0J2">
+                    <connections>
+                        <action selector="dropPiece:" destination="BYZ-38-t0r" id="emA-By-XZy"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="18.840579710144929" y="97.767857142857139"/>
         </scene>

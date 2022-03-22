@@ -20,8 +20,20 @@ CGFloat ratio = 0.6;
     [self drawPieces];
 }
 - (void)drawPieces{
-    [self drawPieceAtCol:1 row:1 isX:false];
+    [self drawPieceAtCol:0 row:0 isX:false];
+    [self drawPieceAtCol:1 row:0 isX:false];
+    [self drawPieceAtCol:2 row:0 isX:false];
+    
     [self drawPieceAtCol:0 row:1 isX:true];
+    [self drawPieceAtCol:1 row:1 isX:true];
+    [self drawPieceAtCol:2 row:1 isX:true];
+    
+    [self drawPieceAtCol:0 row:2 isX:true];
+    [self drawPieceAtCol:1 row:2 isX:true];
+    [self drawPieceAtCol:2 row:2 isX:true];
+
+
+   
 }
 - (void)drawPieceAtCol:(int)col row:(int)row isX:(BOOL)isX {
     CGFloat radius = 0.5 * ratio * squareSide;
