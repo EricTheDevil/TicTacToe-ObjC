@@ -13,12 +13,14 @@ CGFloat squareSide = 100;
 CGFloat ratio = 0.6;
 
 - (void)drawRect:(CGRect)rect {
+    // set size of grid
     NSLog(@"width = %f", rect.size.width);
     squareSide = self.bounds.size.width / 3;
 
     [self drawBoard];
     [self drawPieces];
 }
+// draw the pieces on the board
 - (void)drawPieces{
     [self drawPieceAtCol:0 row:0 isX:false];
     [self drawPieceAtCol:1 row:0 isX:false];
@@ -35,6 +37,7 @@ CGFloat ratio = 0.6;
 
    
 }
+// draw the pieces on the right grid location
 - (void)drawPieceAtCol:(int)col row:(int)row isX:(BOOL)isX {
     CGFloat radius = 0.5 * ratio * squareSide;
     CGFloat centerX = (0.5 + col) * squareSide;
@@ -68,6 +71,7 @@ CGFloat ratio = 0.6;
 
 
 */
+// draw the board with the parameters
 - (void)drawBoard {
     UIBezierPath *path = [[UIBezierPath alloc] init];
     

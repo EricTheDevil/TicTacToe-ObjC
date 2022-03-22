@@ -9,6 +9,7 @@
 
 @interface ViewController ()
 
+    @property (weak, nonatomic) IBOutlet BoardView *boardView;
 @end
 
 @implementation ViewController

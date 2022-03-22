@@ -9,7 +9,6 @@
 #import "BoardView.h"
 @interface ViewController : UIViewController
 
-@property (weak, nonatomic) IBOutlet BoardView *boardView;
 
 @end
 
