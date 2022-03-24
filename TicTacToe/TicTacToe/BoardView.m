@@ -22,20 +22,15 @@ CGFloat ratio = 0.6;
 }
 // draw the pieces on the board
 - (void)drawPieces{
-    [self drawPieceAtCol:0 row:0 isX:false];
-    [self drawPieceAtCol:1 row:0 isX:false];
-    [self drawPieceAtCol:2 row:0 isX:false];
-    
-    [self drawPieceAtCol:0 row:1 isX:true];
-    [self drawPieceAtCol:1 row:1 isX:true];
-    [self drawPieceAtCol:2 row:1 isX:true];
-    
-    [self drawPieceAtCol:0 row:2 isX:true];
-    [self drawPieceAtCol:1 row:2 isX:true];
-    [self drawPieceAtCol:2 row:2 isX:true];
+    for (int row = 0; row < 3; row++) {
+        for (int col = 0; col < 3 ; col++) {
+            Piece *piece = [self.ticTacToeDelegate pieceAtCol:col row:row];
+            if(piece != nil) {
+                [self drawPieceAtCol:col row:row isX:piece.isX];
+            }
+        }
+    }
 
-
-   
 }
 // draw the pieces on the right grid location
 - (void)drawPieceAtCol:(int)col row:(int)row isX:(BOOL)isX {
@@ -57,20 +52,7 @@ CGFloat ratio = 0.6;
     path.lineWidth = 5;
     [path stroke];
 }
-/*
-- (void)drawPieces {
-    for (int row = 0; row < 3; row++) {
-        for (int col = 0; col < 3; col++) {
-            Piece *piece = [self.ticTacToeDelegate pieceAtCol:col row:row];
-            if (piece != nil) {
-                [self drawPieceAtCol:col row:row isX:piece.isX];
-            }
-        }
-    }
-}
 
-
-*/
 // draw the board with the parameters
 - (void)drawBoard {
     UIBezierPath *path = [[UIBezierPath alloc] init];
