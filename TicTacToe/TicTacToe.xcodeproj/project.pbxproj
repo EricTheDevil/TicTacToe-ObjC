@@ -63,6 +63,7 @@
 		0705481C27EB42CD0095C136 /* Piece.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Piece.m; sourceTree = "<group>"; };
 		0705481E27EB43820095C136 /* TicTacToe.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TicTacToe.h; sourceTree = "<group>"; };
 		0705481F27EB43820095C136 /* TicTacToe.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TicTacToe.m; sourceTree = "<group>"; };
+		0705482127EC552A0095C136 /* TicTacToeDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TicTacToeDelegate.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +114,7 @@
 		070547E027E8A0AC0095C136 /* TicTacToe */ = {
 			isa = PBXGroup;
 			children = (
+				0705482127EC552A0095C136 /* TicTacToeDelegate.h */,
 				070547E127E8A0AC0095C136 /* AppDelegate.h */,
 				070547E227E8A0AC0095C136 /* AppDelegate.m */,
 				070547E427E8A0AC0095C136 /* SceneDelegate.h */,

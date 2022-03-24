@@ -7,7 +7,9 @@
 
 #import <UIKit/UIKit.h>
 #import "BoardView.h"
-@interface ViewController : UIViewController
+#import "TicTacToeDelegate.h"
+
+@interface ViewController : UIViewController<TicTacToeDelegate>
 
 
 @end

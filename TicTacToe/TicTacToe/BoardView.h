@@ -6,10 +6,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "TicTacToeDelegate.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface BoardView : UIView
+
+@property (nonatomic, weak) id <TicTacToeDelegate> ticTacToeDelegate;
 
 @end
 

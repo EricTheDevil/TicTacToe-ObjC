@@ -4,19 +4,23 @@
 //
 //  Created by eric ng on 21.3.2022.
 //
-
 #import "ViewController.h"
+#import "TicTacToe.h"
 
 @interface ViewController ()
 
-    @property (weak, nonatomic) IBOutlet BoardView *boardView;
+@property TicTacToe *ticTacToe;
+@property (weak, nonatomic) IBOutlet BoardView *boardView;
+
 @end
 
 @implementation ViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+
+    _ticTacToe = [[TicTacToe alloc] init];
+    self.boardView.ticTacToeDelegate = self;
 }
 - (IBAction)dropPiece:(UITapGestureRecognizer *)sender {
     CGPoint fingerTip = [sender locationInView:self.boardView];
@@ -26,6 +30,11 @@
     int row = 2- (int)(fingerTip.y / squareSide);
     
     NSLog(@"finger tip:(%d, %d)", col, row);
+}
+
+
+- (id)pieceAtCol:(int)col row:(int)row { 
+    return [self.ticTacToe pieceAtCol:col row:row];
 }
 
 
