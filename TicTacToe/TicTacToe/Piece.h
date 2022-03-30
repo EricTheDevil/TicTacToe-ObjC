@@ -14,6 +14,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property int col;
 @property int row;
 @property bool isX;
+@property int points;
 @end
 
 NS_ASSUME_NONNULL_END

@@ -29,7 +29,7 @@
     int col = fingerTip.x / squareSide;
     int row = 2- (int)(fingerTip.y / squareSide);
     
-    NSLog(@"finger tip:(%d, %d)", col, row);
+    
     [self.ticTacToe dropPieceAtCol:col row:row];
     [self.boardView setNeedsDisplay];
 }

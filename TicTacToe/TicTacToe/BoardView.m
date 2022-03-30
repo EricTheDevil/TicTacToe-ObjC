@@ -12,6 +12,7 @@
 CGFloat squareSide = 100;
 CGFloat ratio = 0.6;
 
+
 - (void)drawRect:(CGRect)rect {
     // set size of grid
     NSLog(@"width = %f", rect.size.width);
@@ -27,10 +28,10 @@ CGFloat ratio = 0.6;
             Piece *piece = [self.ticTacToeDelegate pieceAtCol:col row:row];
             if(piece != nil) {
                 [self drawPieceAtCol:col row:row isX:piece.isX];
+           
             }
         }
     }
-
 }
 // draw the pieces on the right grid location
 - (void)drawPieceAtCol:(int)col row:(int)row isX:(BOOL)isX {
