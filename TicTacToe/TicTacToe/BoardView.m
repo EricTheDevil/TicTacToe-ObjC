@@ -20,6 +20,7 @@ CGFloat ratio = 0.6;
 
     [self drawBoard];
     [self drawPieces];
+    [self checkPieces];
 }
 // draw the pieces on the board
 - (void)drawPieces{
@@ -28,9 +29,27 @@ CGFloat ratio = 0.6;
             Piece *piece = [self.ticTacToeDelegate pieceAtCol:col row:row];
             if(piece != nil) {
                 [self drawPieceAtCol:col row:row isX:piece.isX];
-           
             }
         }
+    }
+}
+- (void) checkPieces{
+    int col=0;
+    [self checkRow:col];
+    col=1;
+    [self checkRow:col];
+}
+- (void) checkRow:(int)col{
+    int counter = 0;
+    for (int row = 0; row < 3; row++) {
+        Piece *piece = [self.ticTacToeDelegate pieceAtCol:col row:row];
+        if(piece != nil) {
+            [self drawPieceAtCol:col row:row isX:piece.isX];
+        }
+        if(piece.isX)
+            counter += piece.points;
+        if(piece.isX)
+            NSLog(@"PIECES = %d", counter);
     }
 }
 // draw the pieces on the right grid location
