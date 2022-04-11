@@ -38,18 +38,35 @@ CGFloat ratio = 0.6;
     [self checkRow:col];
     col=1;
     [self checkRow:col];
+    col=2;
+    [self checkRow:col];
+
 }
 - (void) checkRow:(int)col{
-    int counter = 0;
+    int counter1 = 0;
+    int counter2 = 0;
     for (int row = 0; row < 3; row++) {
         Piece *piece = [self.ticTacToeDelegate pieceAtCol:col row:row];
+        // calculate points
         if(piece != nil) {
-            [self drawPieceAtCol:col row:row isX:piece.isX];
+                
+                if(piece.isX)
+                {
+                    counter1 += piece.points;
+                    NSLog(@"PIECES1 = %int %d", col, counter1);
+                    if(counter1 == 15) {
+                        NSLog(@"PLAYER 1 WINNER");
+
+                    }
+                }
+                else{
+                    counter2 += piece.points;
+                    if( counter2 == 15 ) {
+                        NSLog(@"PLAYER 2 WINNER");
+
+                    }
+                }
         }
-        if(piece.isX)
-            counter += piece.points;
-        if(piece.isX)
-            NSLog(@"PIECES = %d", counter);
     }
 }
 // draw the pieces on the right grid location
